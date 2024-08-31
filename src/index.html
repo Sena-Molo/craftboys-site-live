@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&family=SUSE:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>CraftBoys</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div id="navbar">
+        <div id="nav-1" class="nav-logo">CraftBoys Logo</div>
+        <div id="nav-2" class="nav-menu">Home</div>
+        <div id="nav-3" class="nav-menu">Gallery</div>
+        <div id="nav-4" class="nav-menu">About</div>
+        <div id="nav-5" class="nav-menu">Contact</div>
+    </div>
+
+    <!-- H1,H2 -->
+    <h1>
+        We Design What's Best For You!
+    </h1>
+    <h2>
+        Crafting websites and graphic designs that work as hard as you do-designed to drive real results.
+    </h2>
+
+    <!-- SLIDESHOW IMAGES -->
+    <div class="slideshow-container">
+        <div class="Slides fade">
+            <img src="graphic-design.jpg" style="width:100%">
+            <div class="text">Graphic Design</div>
+        </div>
+
+        <div class="Slides fade">
+            <img src="web-design.jpg" style="width:100%">
+            <div class="text">Web Design</div>
+        </div>
+
+        <div class="Slides fade">
+            <img src="web-dev.jpg" style="width:100%">
+            <div class="text">Web Developing</div>
+        </div>
+    </div>
+        <!-- SCRIPT -->
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+        <!-- BUTTON FOR MORE -->
+        <div id="button-1">
+            <buton>See More Of What We Can Do</buton>
+        </div>
+
+</body>
+
+</html>
