@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&family=SUSE:wght@100..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>CraftBoys</title>
@@ -31,48 +31,61 @@
 
     <!-- SLIDESHOW IMAGES -->
     <div class="slideshow-container">
+
         <div class="Slides fade">
-            <img src="graphic-design.jpg" style="width:100%">
+            <img class="img-slide" src="graphic-design.jpg" style="width:100%">
             <div class="text">Graphic Design</div>
         </div>
 
         <div class="Slides fade">
-            <img src="web-design.jpg" style="width:100%">
+            <img class="img-slide" src="web-design.jpg" style="width:100%">
             <div class="text">Web Design</div>
         </div>
 
         <div class="Slides fade">
-            <img src="web-dev.jpg" style="width:100%">
+            <img class="img-slide" src="web-dev.jpg" style="width:100%">
             <div class="text">Web Developing</div>
         </div>
+
     </div>
-        <!-- SCRIPT -->
-        <script>
-            let slideIndex = 0;
-            showSlides();
+    <br>
 
-            function showSlides() {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1 }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 2000); // Change image every 2 seconds
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("Slides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-        </script>
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += "active";
+            setTimeout(showSlides, 10000); // Change image every 2 seconds
+        }
+    </script>
 
-        <!-- BUTTON FOR MORE -->
-        <div id="button-1">
-            <buton>See More Of What We Can Do</buton>
-        </div>
+    <div></div>
+
+    <!-- BUTTON FOR MORE -->
+    <div id="button-1">
+        <buton>See More Of What We Can Do</buton>
+    </div>
+    <!-- FOOTER -->
+    <div id="footer">
+        © CraftBoys | 2024
+    </div>
 
 </body>
 
